@@ -157,7 +157,7 @@
 
         <footer class="text-center mt-12">
             <p class="text-gray-400">Присоединяйтесь и экономьте с приложением "Хмельницкий"!</p>
-            <p class="text-gray-400 text-sm mt-1">Разработал Антон Павлов, тренинг-менеджер команды Центра Хмельницкого Образования</p>
+            <p class="text-gray-400 text-sm mt-1">Разработал Антон Павлов, тренинг-менеджер команды Центра Хмельницкого Образования.</p>
         </footer>
     </div>
 
@@ -220,14 +220,14 @@
         });
 
         const cashbackGrowthCtx = document.getElementById('cashbackGrowthChart').getContext('2d');
-        const originalLabels = ['Новый (от 0₽)', 'Регуляр (от 3000₽)', 'Частный (от 10000₽)', 'Высший (от 25000₽)'];
+        const originalLabels = ['Новый (< 300 ₽)', 'Регуляр (300–2499 ₽)', 'Частный (2500–4999 ₽)', 'Высший (≥ 5000 ₽)'];
         new Chart(cashbackGrowthCtx, {
             type: 'bar',
             data: {
                 labels: originalLabels.map(wrapLabel),
                 datasets: [{
                     label: 'Процент кэшбэка',
-                    data: [3, 5, 7, 10],
+                    data: [0, 5, 7, 10],
                     backgroundColor: ['#FFD166', '#FF6B6B', '#06D6A0', '#118AB2'],
                     borderRadius: 8,
                     barThickness: 25,
